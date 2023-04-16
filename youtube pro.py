@@ -8,7 +8,7 @@ class Downloader(QDialog):
     def __init__(self, parent=None):
         super(Downloader, self).__init__(parent)
 
-        self.setStyleSheet("background-color: rgba(255, 255, 255, 0.6);")
+        self.setStyleSheet("background-image: rgba(255, 255, 200, 0.5);")
 
         self.urlLabel = QLabel('YouTube URL: ')
         self.urtwolLabel = QLabel('PlayList URL: ')
@@ -32,9 +32,9 @@ class Downloader(QDialog):
         layout.addWidget(self.urtwolEdit, 1, 1)
         layout.addWidget(self.urthreelEdit, 2, 1)
 
-        layout.addWidget(self.BrowseButton, 3, 1)
+        layout.addWidget(self.BrowseButton, 3, 0)
 
-        layout.addWidget(self.showMenuButton, 3,0)
+        layout.addWidget(self.showMenuButton, 3, 1)
         
 
 
@@ -64,11 +64,13 @@ class Downloader(QDialog):
 
         button_style = """
             QPushButton {
-                background-color: #f44336;
+                background-color: #222;
                 color: white;
                 font-size:11px;
-                border: 2px solid #f44336;
+                padding: 1rem;
                 font-weight:bold;
+                border-radius: 10px;
+                
             }
 
             QPushButton:hover {

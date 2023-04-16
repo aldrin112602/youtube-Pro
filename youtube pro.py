@@ -8,19 +8,19 @@ class Downloader(QDialog):
     def __init__(self, parent=None):
         super(Downloader, self).__init__(parent)
 
-        self.setStyleSheet("background-color:#F0ECE3;")
+        self.setStyleSheet("background-color: rgba(255, 255, 255, 0.6);")
 
-        self.urlLabel = QLabel('YouTube URL:')
-        self.urtwolLabel = QLabel('PlayList URL:')
-        self.urthreelLabel = QLabel('Download Location:')
+        self.urlLabel = QLabel('YouTube URL: ')
+        self.urtwolLabel = QLabel('PlayList URL: ')
+        self.urthreelLabel = QLabel('Download Location: ')
 
         self.urlEdit = QLineEdit()
         self.urtwolEdit = QLineEdit()
         self.urthreelEdit = QLineEdit()
 
-        self.showMenuButton = QPushButton('Download')
+        self.showMenuButton = QPushButton('Download Now')
 
-        self.BrowseButton = QPushButton('Browse')
+        self.BrowseButton = QPushButton('Choose path')
 
 
         layout = QGridLayout()
@@ -32,7 +32,7 @@ class Downloader(QDialog):
         layout.addWidget(self.urtwolEdit, 1, 1)
         layout.addWidget(self.urthreelEdit, 2, 1)
 
-        layout.addWidget(self.BrowseButton, 2, 2)
+        layout.addWidget(self.BrowseButton, 3, 1)
 
         layout.addWidget(self.showMenuButton, 3,0)
         
@@ -40,7 +40,7 @@ class Downloader(QDialog):
 
         
         self.setLayout(layout)
-        self.setWindowTitle('MOHAMED ELSAYED')
+        self.setWindowTitle('Video Downloader | Aldrin Caballero')
 
         self.BrowseButton.clicked.connect(self.Browse)
         self.showMenuButton.clicked.connect(self.showMenuDialog)

@@ -59,30 +59,31 @@ class Downloader(QDialog):
             QPushButton {
                 background-color: #222;
                 color: white;
-                font-size:11px;
+                font-size:15px;
                 padding: 1rem;
+                border-radius: 5px;
                 font-weight:bold;
-                border-radius: 2px;
                 border-radius: 5px;
             }
 
             QPushButton:hover {
-                background-color: white;
-                color:#f44336;
-                border: 1px solid #222;
+                background-color: #555;
             }
         """
 
         label_style = """
             QLabel {
-                font-size:13px;
+                font-size: 14px;
                 font-weight:bold;
-                color:green;
+                color:#222;
             }
     """
         edit_style = """
-            QLineEdit{
+            QLineEdit {
                 padding-left: 20px;
+                border-radius: 5px;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                font-size: 16px;
             }
     """
 
@@ -206,24 +207,27 @@ class Downloader(QDialog):
 
         button_d = """
             QPushButton {
-                background-color: #000;
+                background-color: #222;
                 color: white;
-                font-size:11px;
-                font-weight:bold;
+                font-size:15px;
+                font-weight: bold;
                 border-radius: 5px;
             }
 
             QPushButton:hover {
-                opacity: 0.7;
+                background-color: #333;
             }
         """
         button_c = """
             QComboBox {
-                background-color: white; 
-                color: black; 
+                background-color: #fefefe; 
+                color: black;
+                padding-left: 20px;
                 border: 2px solid #008CBA;
                 font-weight:bold;
-
+                border-radius: 5px;
+                outline: none;
+                font-size:15px;
             }
 
             QComboBox:hover {
